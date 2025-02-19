@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import type { FC } from 'react';
+import { Footer } from '@/app/_components/Footer';
+import { Header } from '@/app/_components/Header';
 
 import '@/styles/globals.css';
 
@@ -15,7 +17,11 @@ export const metadata: Metadata = {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="ja">
-      <body className="">{children}</body>
+      <body className="">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 };
