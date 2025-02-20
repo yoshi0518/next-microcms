@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/app/_components/Header/index.module.css';
+import { Menu } from '@/app/_components/Menu';
 
 export const Header = () => {
   return (
@@ -18,6 +19,7 @@ export const Header = () => {
           priority
         />
       </Link>
+      <Menu />
     </header>
   );
 };
