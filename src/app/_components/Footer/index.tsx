@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '@/app/_components/Footer/index.module.css';
 
 export const Footer = () => {
@@ -6,13 +7,13 @@ export const Footer = () => {
       <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>
-            <a href="/news">ニュース</a>
+            <Link href="/news">ニュース</Link>
           </li>
           <li className={styles.item}>
-            <a href="/members">メンバー</a>
+            <Link href="/members">メンバー</Link>
           </li>
           <li className={styles.item}>
-            <a href="/contact">お問い合わせ</a>
+            <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
       </nav>
