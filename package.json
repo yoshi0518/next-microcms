@@ -24,6 +24,7 @@
     "dayjs": "^1.11.13",
     "microcms-js-sdk": "^3.1.2",
     "next": "15.1.7",
+    "nextjs-basic-auth-middleware": "^3.1.0",
     "postcss": "^8.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

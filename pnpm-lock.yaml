@@ -25,6 +25,9 @@ importers:
       next:
         specifier: 15.1.7
         version: 15.1.7(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      nextjs-basic-auth-middleware:
+        specifier: ^3.1.0
+        version: 3.1.0(next@15.1.7(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       postcss:
         specifier: ^8.5.2
         version: 8.5.2
@@ -4381,6 +4384,12 @@ packages:
         optional: true
       sass:
         optional: true
+
+  nextjs-basic-auth-middleware@3.1.0:
+    resolution:
+      { integrity: sha512-k1GSYiLMYj4tK6swAmArTUBheSkv7roUUF2KI8Cv8HYHmSYep5Y0AP0RB/1sez7xTRi2Fw2SxYbQA/jAmBJCug== }
+    peerDependencies:
+      next: '>=13.1'
 
   no-case@3.0.4:
     resolution:
@@ -9933,6 +9942,10 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+
+  nextjs-basic-auth-middleware@3.1.0(next@15.1.7(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
+    dependencies:
+      next: 15.1.7(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
   no-case@3.0.4:
     dependencies:
