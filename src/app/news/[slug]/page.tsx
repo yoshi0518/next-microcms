@@ -8,13 +8,19 @@ type Props = {
   params: {
     slug: string;
   };
+  searchParams: {
+    dk?: string;
+  };
 };
 
-const Page: React.FC<Props> = async ({ params }: Props) => {
-  const data = await getNewsDetail(params.slug).catch(notFound);
+const Page: React.FC<Props> = async ({ params, searchParams }: Props) => {
+  const data = await getNewsDetail(params.slug, {
+    draftKey: searchParams.dk,
+  }).catch(notFound);
 
   return (
     <>
+      {searchParams.dk && <p className="text-red-500">下書き</p>}
       <Article data={data} />
       <div className={styles.footer}>
         <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
