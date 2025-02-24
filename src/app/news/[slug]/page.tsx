@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Article } from '@/app/_components/Article';
 import { ButtonLink } from '@/app/_components/ButtonLink';
@@ -10,6 +11,22 @@ type Props = {
   };
   searchParams: {
     dk?: string;
+  };
+};
+
+export const generateMetadata = async ({ params, searchParams }: Props): Promise<Metadata> => {
+  const data = await getNewsDetail(params.slug, {
+    draftKey: searchParams.dk,
+  });
+
+  return {
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      images: [data.thumbnail?.url ?? ''],
+    },
   };
 };
 

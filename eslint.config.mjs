@@ -62,6 +62,7 @@ const eslintConfig = [
       '**/page.tsx',
       '**/layout.tsx',
       '**/not-found.tsx',
+      '**/sitemap.ts',
       'next.config.ts',
       'postcss.config.mjs',
       'tailwind.config.ts',
